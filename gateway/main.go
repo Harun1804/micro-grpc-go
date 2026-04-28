@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/gofiber/fiber/v3"
-	pb "github.com/harun1804/micro-grpc-go/proto"
+	pb "github.com/harun1804/micro-grpc-go/proto/pb"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )

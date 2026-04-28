@@ -5,7 +5,7 @@ import (
 	"log"
 	"net"
 
-	pb "github.com/harun1804/micro-grpc-go/proto" // sesuaikan path module Anda
+	pb "github.com/harun1804/micro-grpc-go/proto/pb" // sesuaikan path module Anda
 	"google.golang.org/grpc"
 
 	"gorm.io/driver/mysql"

@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package proto;
 
-option go_package = "./proto";
+option go_package = "github.com/harun1804/micro-grpc-go/proto/pb";
 service ProductService {
   rpc GetProducts(Empty) returns (stream ProductResponse);
   rpc GetProduct(ProductRequest) returns (ProductResponse);
