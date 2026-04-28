@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "./proto";
+service ProductService {
+  rpc GetProducts(Empty) returns (stream ProductResponse);
+  rpc GetProduct(ProductRequest) returns (ProductResponse);
+  rpc CreateProduct(ProductCreateRequest) returns (ProductResponse);
+  rpc UpdateProduct(ProductUpdateRequest) returns (ProductResponse);
+  rpc DeleteProduct(ProductRequest) returns (DeleteResponse);
+}
+
+message Empty {}
+
+message ProductRequest {
+  string id = 1;
+}
+
+message ProductCreateRequest {
+  string id = 1;
+  string name = 2;
+  float price = 3;
+}
+
+message ProductUpdateRequest {
+  string id = 1;
+  string name = 2;
+  float price = 3;
+}
+
+message ProductResponse {
+  string id = 1;
+  string name = 2;
+  float price = 3;
+}
+
+message DeleteResponse { string message = 1; }
